@@ -37,9 +37,10 @@ class FarmingProducerView(ModelViewSet):
         if data.get('name_producer') is None:
             return 'É necessário informar um nome de produtor rural válido.'
         try:
-            str(data.get('name_producer'))
-        except FieldError:
+           str(data.get('name_producer'))
+        except:
             return 'É necessário informar o nome do produtor válido.'
+       
 
         if data.get('cpf_producer') is None:
             return 'É necessário informar um CPF válido para o produtor rural.'
