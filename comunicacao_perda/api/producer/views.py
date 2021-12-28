@@ -33,14 +33,14 @@ class FarmingProducerView(ModelViewSet):
             FarmingProducerSerializer(farmingProducer).data,
             status=status.HTTP_201_CREATED
         )
+
     def _validate_create(self, data):
         if data.get('name_producer') is None:
             return 'É necessário informar um nome de produtor rural válido.'
         try:
-           str(data.get('name_producer'))
-        except:
+            str(data.get('name_producer'))
+        except Exception:
             return 'É necessário informar o nome do produtor válido.'
-       
 
         if data.get('cpf_producer') is None:
             return 'É necessário informar um CPF válido para o produtor rural.'
