@@ -4,12 +4,12 @@ from comunicacao_perda.farming_localization.models import FarmingLocalization
 
 
 class Farming(models.Model):
-    EXCESSIVE_RAN = 'EXCESSIVE_RAN'
-    FROST = 'FROST'
-    HAILSTORM = 'HAILSTORM'
-    BARREN = 'BARREN'
-    WINDSTORM = 'WINDSTORM'
-    BOLT = 'BOLT'
+    EXCESSIVE_RAN = 1
+    FROST = 2
+    HAILSTORM = 3
+    BARREN = 4
+    WINDSTORM = 5
+    BOLT = 6
     
     TYPE_EVENT = (
         (EXCESSIVE_RAN, 'Chuva Excessiva'),
